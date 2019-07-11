@@ -11,17 +11,21 @@ NOTES:
 
 function ViewDatabase() {
     return (
-        <Link to='/database'><Button variant = "outline-danger">
-            Database
-        </Button></Link>
+        <Link to='/database'>
+            <Button variant = "outline-danger">
+                Database
+            </Button>
+        </Link>
     )
 }
 
 function ViewGlossary() {
     return (
-        <Link to='/glossary'><Button variant = "outline-danger">
-            Glossary
-        </Button></Link>
+        <Link to='/glossary'>
+            <Button variant = "outline-danger">
+                Glossary
+            </Button>
+        </Link>
     )
 }
 
