@@ -9,6 +9,24 @@ NOTES:
 -) stylize (bootstrap) + ./css sheet
 */
 
+const titleStyle = {
+    top: '10%',
+    //font??
+}
+
+const subtitleStyle = {
+    top: '20%',
+    //font??
+}
+
+const databaseStyle = {
+    top: '50%',
+}
+
+const glossaryStyle = {
+    bottom: '10%',
+}
+
 function ViewDatabase() {
     return (
         <Link to='/database'>
@@ -36,9 +54,19 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <h1>Creators Circle</h1>
-                <ViewDatabase />
-                <ViewGlossary />
+                <h1 style={titleStyle}>
+                    Creators Circle
+                </h1>
+                <h2 style={subtitleStyle}>
+                    Opportunities Database
+                </h2>
+                <div style={databaseStyle}>
+                    <ViewDatabase />
+                </div>
+                <br />
+                <div style={glossaryStyle}>
+                    <ViewGlossary />
+                </div>
             </div>
         )
     }
