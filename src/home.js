@@ -4,10 +4,7 @@ import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom';
 import { isAbsolute } from 'path';
 
-/*
-NOTES:
--) stylize (bootstrap) + ./css sheet
-*/
+//TODO: stylize (bootstrap) + ./css sheet
 
 const titleStyle = {
     top: '10%',
