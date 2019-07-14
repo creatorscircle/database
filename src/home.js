@@ -6,6 +6,8 @@ import { isAbsolute } from 'path';
 
 //TODO: stylize (bootstrap) + ./css sheet
 
+//TODO: deploy to gh-pages
+
 const titleStyle = {
     top: '10%',
     //font??
@@ -13,6 +15,7 @@ const titleStyle = {
 
 const subtitleStyle = {
     top: '20%',
+    fontSize: '20px',
     //font??
 }
 
@@ -55,8 +58,9 @@ class Home extends React.Component {
                     Creators Circle
                 </h1>
                 <h2 style={subtitleStyle}>
-                    Opportunities Database
+                    An Opportunities Database for High School Students
                 </h2>
+                <br />
                 <div style={databaseStyle}>
                     <ViewDatabase />
                 </div>

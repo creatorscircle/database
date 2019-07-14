@@ -8,6 +8,7 @@ class Glossary extends React.Component {
     render() {
         return (
             <div>
+                <br />
                 <Link to="/">
                     <Button variant="outline-danger">
                         Back

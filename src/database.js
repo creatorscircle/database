@@ -3,70 +3,77 @@ import MUIDataTable from 'mui-datatables'; //TODO: consider other options (fireb
 import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom';
 
-//TODO: adjust categories in json + update file (i.e. website category)
-//TODO: tailor options
+/*
+TODO (technical):
+    -) try to get rid of website column (button in the title box?) -> would also make description column wider
+*/
+
+/*
+TODO (nontechnical):
+    -) definitions for column titles
+*/
 
 class Database extends React.Component {
     render() {
         const columns = [
             {
-                name: "Opportunity Title",
+                name: "title",
                 label: "Title",
-                options: {filter: true, sort: true }
-            },
-            {
-                name: "Grade Level(s) Open To",
-                label: "Grade Level(s) Open To",
                 options: {filter: true, sort: true}
             },
             {
-                name: "Scholarship, Award Amount, or Payment Plan (in USD)",
-                label: "Scholarship, Award Amount, or Payment Plan (in USD)",
+                name: "grade_level",
+                label: "Grade Level",
+                options: {filter: true, sort: true, hint: "Grade levels this opportunity is open to"}
+            },
+            {
+                name: "award_amount",
+                label: "Scholarship or Award Amount (USD)",
                 options: {filter: true, sort: true}
             },
             {
-                name: "App Deadline",
-                label: "Deadline to Apply",
+                name: "deadline",
+                label: "Application Deadline",
                 options: {filter: true, sort: true}
             },
             {
-                name: "Discipline",
+                name: "discipline",
                 label: "Discipline",
                 options: {filter: true, sort: true}
             },
             {
-                name: "Opportunity Type",
+                name: "opp_type",
                 label: "Opportunity Type",
                 options: {filter: true, sort: true}
             },
             {
-                name: "Program Dates / Length",
-                label: "Program Dates or Length of Time",
+                name: "program_dates",
+                label: "Program Dates/Length",
                 options: {filter: true, sort: true}
             },
             {
-                name: "Program Cost (USD)",
+                name: "program_cost",
                 label: "Program Cost (USD)",
                 options: {filter: true, sort: true}
             },
             {
-                name: "Location and Languages (if relevant)",
+                name: "location_language",
                 label: "Location and Language",
                 options: {filter: true, sort: true}
             },
             {
-                name: "Description",
+                name: "description",
                 label: "Description",
                 options: {filter: true, sort: true}
             },
             {
-                name: "Website",
+                name: "website",
                 label: "Website",
-                options: {filter: true, sort: true}
+                options: {filter: true, sort: true, hint: "Link to website"}
             }
         ];
 
-        const data = require('./data_spreadsheet.json');
+        const data = require('./data_2.json');
 
         const options = {
             filterType: 'checkbox',
@@ -74,6 +81,7 @@ class Database extends React.Component {
             selectableRows: 'false',
             print: 'false',
             download: 'false',
+            //TODO: textLabels (User provided labels to localize text)
             isRowSelectable: (dataIndex) => {
                 return false;
             },
