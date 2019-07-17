@@ -2,7 +2,7 @@
   "name": "database",
   "version": "0.1.0",
   "private": true,
-  "hompage": "https://creatorscircle.github.io/database",
+  "hompage": "https://creatorscircle.github.io/database/",
   "dependencies": {
     "@material-ui/core": "^4.2.0",
     "@material-ui/icons": "^4.2.1",
