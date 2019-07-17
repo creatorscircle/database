@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
-//import Grid from '@material-ui/core/Grid'; //currently vertical
 import {Link} from 'react-router-dom';
-import { isAbsolute } from 'path';
 
 //TODO: stylize (bootstrap) + ./css sheet
 
@@ -29,7 +27,7 @@ const glossaryStyle = {
 
 function ViewDatabase() {
     return (
-        <Link to='/database'>
+        <Link to="/database">
             <Button variant = "outline-danger">
                 Database
             </Button>
@@ -39,7 +37,7 @@ function ViewDatabase() {
 
 function ViewGlossary() {
     return (
-        <Link to='/glossary'>
+        <Link to="/glossary">
             <Button variant = "outline-danger">
                 Glossary
             </Button>
